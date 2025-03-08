@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #8c2b4b;
+    --hover-color: #000000;
+    --text-color: #FFFFFF;
+    --spacing: 8px;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: #FFFFFF;
+}
+
+/*Header*/
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: calc(var(--spacing) * 2) 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 calc(var(--spacing) * 2);
+}
+
+/*Logo*/
+
+.header__logo {
+    height: 70px;
+}
+
+/*Menú de navegación*/
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    gap: calc(var(--spacing) * 2);
+    margin: 0;
+    padding: 0;
+}
+
+
+.header__link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.header__link:hover {
+    color: var(--hover-color)
+}
+
+/*Hero Banner*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero__video-bg {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: rgba(140, 43, 75, 0.9);
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 90%;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.hero__title span {
+    font-weight: bold;
+    font-size: 3.2rem;
+}
+
+/*Sobre mí*/
+
+.sobre-mi {
+    background-color: rgba(228, 17, 87, 0.5);
+    padding: 80px 0;
+}
+
+.sobre-mi__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.sobre-mi__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.sobre-mi__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+}
+
+.sobre-mi__text {
+    background-color: rgba(140, 43, 75, 0.7);
+    color: #fff;
+    padding: 30px;
+    width: 60%;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-mi__photo {
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.sobre-mi__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
