@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // **SLIDER**
     const track = document.querySelector(".slider__track");
     const prevBtn = document.querySelector(".slider__btn--prev");
     const nextBtn = document.querySelector(".slider__btn--next");
@@ -28,7 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("resize", updateSliderPosition);
 
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight") nextBtn.click();
+        if (event.key === "ArrowLeft") prevBtn.click();
+    })
+
 });
+
+// **MODAL**
 
 document.addEventListener("DOMContentLoaded", () => {
     const servicio = document.querySelectorAll(".servicio");
