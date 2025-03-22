@@ -454,4 +454,138 @@ body {
     background: linear-gradient(90deg, #800080, #DA70D6);
 }
 
+/*Reseñas*/
 
+.reseñas {
+    background: linear-gradient(135deg, #8c2b4b, #8f536e);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.reseñas__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.reseñas__title {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.reseñas__grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.reseña {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reseña:hover  {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 10px 20px  rgba(0, 0, 0, 0.3);
+}
+
+.reseña__text {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.reseña__stars {
+    color: gold;
+    font-size: 1.5rem;
+}
+
+/*Contacto*/
+
+.contacto {
+    background-color: rgba(187, 27, 81, 0.5);
+    padding: 80px 20px;
+    color: white;
+}
+
+.contacto__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contacto__title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.contacto__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contacto__info {
+    width: 40%;
+    font-size: 1.2rem;
+}
+
+.contacto__info a {
+    color: white;
+    text-decoration: underline;
+}
+
+.contacto__formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contacto__formulario label {
+    font-size: 1rem;
+}
+
+.contacto__formulario input,
+.contacto__formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+}
+
+.contacto__formulario button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8c2b4b;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contacto__formulario button:hover {
+    background-color: #DA70D6;
+}
+
+@media (maxwidth: 768px) {
+    .contacto__content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.contacto__info,
+.contacto__formulario {
+    width: 100%;
+}
