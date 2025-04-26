@@ -250,6 +250,10 @@ body {
     margin-top: 10px;
 }
 
+.slider__item p {
+    color: white;
+}
+
 /*Botones del slider*/
 
 .slider__btn {
@@ -278,6 +282,7 @@ body {
 .slider__btn--next {
     right: 20px;
 }
+
 
 /*Servicios*/
 
@@ -562,6 +567,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #d3d3d3;
+    box-sizing: border-box;
 }
 
 .contacto__formulario button {
@@ -578,7 +584,7 @@ body {
     background-color: #DA70D6;
 }
 
-@media (maxwidth: 768px) {
+@media (max-width: 768px) {
     .contacto__content {
         flex-direction: column;
         align-items: center;
@@ -588,4 +594,162 @@ body {
 .contacto__info,
 .contacto__formulario {
     width: 100%;
+}
+
+/*Footer*/
+
+.footer {
+    background-color: #8c2b4b;
+    color: #FFFFFF;
+    padding: 2rem 1rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__left,
+.footer__center,
+.footer__right {
+    flex: 1;
+    text-align: center;
+}
+
+.footer__logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer__right a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer__right a:hover {
+    text-decoration: underline;
+}
+
+/*Menú hamburguesa*/
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        z-index: 1000;
+    }
+
+    .header__nav {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #111;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        z-index: 999;
+    }
+
+    .header__nav.active {
+        display: flex;
+    }
+
+    .header__menu {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+
+    .header__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sobre-mi__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-mi__text {
+        width: 100%;
+    }
+
+    .sobre-mi__photo {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+    }
+
+    .servicios__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servicios__info,
+    .servicios__lista {
+        width: 100%;
+        text-align: center;
+    }
+
+    .habilidades__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proyectos__slider {
+        width: 100%;
+    }
+
+    .slider__item {
+        flex: 0 0 90%;
+    }
+
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__left,
+    .footer__center,
+    .footer__right {
+        flex: 1 1 100%;
+    }
+
+    .contacto__info,
+    .contacto__formulario {
+        width: 100%;
+    }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,11 @@
     <header class="header">
         <div class="header__container">
             <img src="assets/2-removebg-preview.png" alt="logo" class="header__logo">
+            <button class="hamburger" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <nav class="header__nav">
                 <ul class="header__menu">
                     <li class="header__item"><a href="#inicio" class="header__link">Inicio</a></li>
@@ -36,7 +41,7 @@
         <div class="hero__video">
             <video autoplay muted loop class="hero__video-bg">
                 <source src="assets/Peach Ash Grey Gradient Color and Style Video Background.mp4" type="video/mp4">
-                <source src="assets/" type="video/webm">
+                <source src="assets/Peach-Ash-Grey-Gradient-Color-and-Style-Video-Background.webm" type="video/webm">
                 Tu navegador no soporta el video.
             </video>
         </div>
@@ -73,28 +78,33 @@
             <div class="slider__viewport">
                 <div class="slider__track">
                     <div class="slider__item">
-                        <img src="" alt="Proyecto 1">
-                        <h3 class="slider__title">Proyecto 1</h3>
+                        <img src="assets/Diseño-sin-título-_27_.webp" alt="Proyecto 1">
+                        <h3 class="slider__title">Wanderly</h3>
+                        <p>Diseño de interfaz de app de viajes hecha con Figma.</p>
                     </div>
 
                     <div class="slider__item">
-                        <img src="" alt="Proyecto 2">
-                        <h3 class="slider__title">Proyecto 2</h3>
+                        <img src="assets/Diseño-sin-título-_28_.webp" alt="Proyecto 2">
+                        <h3 class="slider__title">ALBM</h3>
+                        <p>Diseño de interfaz de app de música hecha con Figma.</p>
                     </div>
 
                     <div class="slider__item">
-                        <img src="" alt="Proyecto 3">
-                        <h3 class="slider__title">Proyecto 3</h3>
+                        <img src="assets/Diseño-sin-título-_29_.webp" alt="Proyecto 3">
+                        <h3 class="slider__title">Bocadito</h3>
+                        <p>Diseño de branding para marca de bocadillos hecha con Illustrator y Photoshop.</p>
                     </div>
 
                     <div class="slider__item">
-                        <img src="" alt="Proyecto 4">
-                        <h3 class="slider__title">Proyecto 4</h3>
+                        <img src="assets/Diseño-sin-título-_30_.webp" alt="Proyecto 4">
+                        <h3 class="slider__title">La Corteza</h3>
+                        <p>Diseño de póster para pizzeria hecha con Illustrator.</p>
                     </div>
 
                     <div class="slider__item">
-                        <img src="" alt="Proyecto 5">
-                        <h3 class="slider__title">Proyecto 5</h3>
+                        <img src="assets/Diseño-sin-título-_31_.webp" alt="Proyecto 5">
+                        <h3 class="slider__title">Bubbli</h3>
+                        <p>Página web diseñada con Wordpress para marca de refrescos.</p>
                     </div>
                 </div>
             </div>
@@ -208,7 +218,7 @@
 
    <!--Reseñas-->
 
-   <section class="reseñas">
+   <section id="reseñas" class="reseñas">
     <div class="reseñas__container">
         <h2 class="reseñas__title">Reseñas</h2>
         <div class="reseñas__grid">
@@ -241,7 +251,7 @@
 
   <!--Contacto-->
   
-  <section class="contacto">
+  <section id="contacto" class="contacto">
     <div class="contacto__container">
         <h2 class="contacto__title">Contacto</h2>
         <div class="contacto__content">
@@ -268,9 +278,21 @@
     </div>
   </section>
 
-   <footer>
-    <p>&copy; 2025 Proyecto Diseño Web</p>
-   </footer>
+   <footer class="footer">
+    <div class="footer__container">
+        <div class="footer__left">
+            <img src="assets/2-removebg-preview.png" alt="logo" class="footer__logo">
+        </div>
+        <div class="footer__center">
+            <p>&copy; 2025 Proyecto Diseño Web. Todos los derechos reservados.</p>
+        </div>
+        <div class="footer__right">
+            <a href="#">Aviso legal</a>
+            <a href="#">Política de cookies</a>
+            <a href="#">Política de privacidad</a>
+        </div>
+    </div>
+    </footer>
 
     <script src="js/script.js" defer></script>
     
