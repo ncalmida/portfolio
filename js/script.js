@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalItems = items.length;
     
     function updateSliderPosition() {
-        const itemWidth = items[0].offsetWidth + 20;
+        const itemWidth = items[0].getBoundingClientRect().width + 20;
         track.style.transform = `translateX(-${index * itemWidth}px)`;
     }
     
@@ -27,7 +27,35 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    window.addEventListener("resize", updateSliderPosition);
+    let startX = 0;
+    let endX = 0;
+
+    track.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    })
+
+    track.addEventListener("touchend", (e) => {
+        endX = e.changedtouches[0].clientX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (startX - endX > 50) {
+            if (index < totalItems - 1) {
+                index++;
+                updateSliderPosition();
+            }
+        } else if (endX - startX > 50) {
+            if (index > 0) {
+                index--;
+                updateSliderPosition();
+            }
+        }
+    }
+
+    window.addEventListener("resize", () => {
+        updateSliderPosition()
+    });
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowRight") nextBtn.click();
