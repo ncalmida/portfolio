@@ -123,13 +123,14 @@ body {
 .sobre-mi {
     background-color: rgba(228, 17, 87, 0.5);
     padding: 80px 0;
-    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .sobre-mi__container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 50px 15px;
     text-align: center;
     box-sizing: border-box;
 }
@@ -148,6 +149,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     position: relative;
+    width: 100%;
 }
 
 .sobre-mi__text {
@@ -155,6 +157,7 @@ body {
     color: #fff;
     padding: 30px;
     width: 60%;
+    max-width: 90%;
     border-radius: 10px;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -186,6 +189,8 @@ body {
 .proyectos {
     background-color: #FFFFFF;
     padding: 50px 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .proyectos h2 {
@@ -195,13 +200,15 @@ body {
 }
 
 .proyectos__container{
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .proyectos__title {
@@ -217,52 +224,59 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .slider__viewport {
     overflow: hidden;
     width: 100%;
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .slider__track {
     display: flex;
     transition: transform 0.3s ease;
-    gap: 20px;
+    width: 100%;
 }
 
 .slider__item {
-    flex: 0 0 90%;
+    flex: 0 0 100%;
     height: auto;
     background-color: var(--primary-color);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 90%;
-    max-width: 90%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .slider__item img {
     width: 100%;
     border-radius: 8px;
-    height: 200px;
-    object-fit: cover;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
 }
 
 .slider__title {
     font-size: 1.2rem;
     color: white;
-    margin-top: 10px;
+    margin: 10px 0;
+    display: block;
 }
 
 .slider__item p {
     color: white;
+    font-size: 0.9rem;
+    margin: 0;
+    display: block;
 }
 
 /*Botones del slider*/
@@ -275,8 +289,8 @@ body {
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 14px;
-    font-size: 1.5rem;
+    padding: 8px 12px;
+    font-size: 1.2rem;
     border-radius: 50%;
     transition: background 0.3s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -288,11 +302,11 @@ body {
 }
 
 .slider__btn--prev {
-    left: 5%;
+    left: 5px;
 }
 
 .slider__btn--next {
-    right: 5%;
+    right: 5px;
 }
 
 
@@ -719,7 +733,9 @@ body {
 
     .sobre-mi__text {
         width: 100%;
+        max-width: 100%;
         padding: 20px;
+        font-size: 1rem;
     }
 
     .sobre-mi__photo {
@@ -731,7 +747,7 @@ body {
     }
 
     .sobre-mi__container {
-        padding: 20px;
+        padding: 20px 10px;
     }
 
     .servicios__container {
@@ -749,36 +765,48 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .proyectos__container {
+        padding: 0 5px;
+    }
+
     .proyectos__slider {
         width: 100%;
         overflow: hidden;
     }
 
     .slider__viewport {
-        padding: 0 10px;
+        padding: 0;
+    }
+
+    .slider__track {
+        width: 100%;
     }
 
     .slider__item {
-        flex: 0 0 90%;
-        min-width: 90%;
-        height: auto;
-        padding: 15px;
+        flex: 0 0 100%;
+        min-width: 100%;
+        max-width: 100%;
+        padding: 10px;
     }
 
     .slider__btn--prev {
-        left: 10px;
+        left: 5px;
     }
 
     .slider__btn--next {
-        right: 10px;
+        right: 5px;
     }
 
     .slider__title {
         font-size: 1rem;
     }
 
+    .slider__item p {
+        font-size: 0.8rem;
+    }
+
     .slider__item img {
-        height: 160px;
+        max-height: 150px;
     }
 
     .footer__container {

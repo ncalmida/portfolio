@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalItems = items.length;
     
     function updateSliderPosition() {
-        const itemWidth = items[0].getBoundingClientRect().width + 20;
+        if (items.length === 0) return; 
+        const itemWidth = items[0].offsetWidth;
         track.style.transform = `translateX(-${index * itemWidth}px)`;
     }
     
@@ -35,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     track.addEventListener("touchend", (e) => {
-        endX = e.changedtouches[0].clientX;
+        endX = e.changedTouches[0].clientX;
         handleSwipe();
     });
 
@@ -60,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("keydown", (event) => {
         if (event.key === "ArrowRight") nextBtn.click();
         if (event.key === "ArrowLeft") prevBtn.click();
-    })
+    });
+
+    updateSliderPosition();
 
 });
 
